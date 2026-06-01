@@ -1,5 +1,11 @@
 document.documentElement.classList.add("is-ready");
 
+document.addEventListener("DOMContentLoaded", () => {
+  if (typeof lucide !== "undefined") {
+    lucide.createIcons();
+  }
+});
+
 const sectionLinks = document.querySelectorAll('.primary-links a[href^="#"]');
 const sections = document.querySelectorAll(".content-section");
 const stage = document.querySelector(".sections-stage");

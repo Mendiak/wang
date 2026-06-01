@@ -12,29 +12,42 @@
   <meta property="og:description" content="Portfolio of W.A. Wang, screenwriter and storyteller.">
 
   <link rel="stylesheet" href="./style.css">
+  <script src="https://unpkg.com/lucide@0.487.0" defer></script>
 </head>
 <body>
   <main class="site-shell" aria-label="W.A. Wang portfolio">
     <section class="hero" aria-labelledby="site-title">
-      <svg class="wordmark" viewBox="0 0 1200 360" role="img" aria-labelledby="site-title wordmark-description">
-        <title id="site-title">W.A. Wang</title>
-        <desc id="wordmark-description">Animated typographic wordmark for W.A. Wang.</desc>
+      <svg class="wordmark" viewBox="0 0 1200 650" role="img" aria-label="W.A. Wang">
         <defs>
-          <linearGradient id="ink-gradient" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+          <linearGradient id="ink-gradient" x1="0" y1="0" x2="1200" y2="650" gradientUnits="userSpaceOnUse">
             <stop class="gradient-stop gradient-stop-a" offset="0%" />
-            <stop class="gradient-stop gradient-stop-b" offset="42%" />
-            <stop class="gradient-stop gradient-stop-c" offset="100%" />
+            <stop class="gradient-stop gradient-stop-b" offset="25%" />
+            <stop class="gradient-stop gradient-stop-c" offset="50%" />
+            <stop class="gradient-stop gradient-stop-d" offset="75%" />
+            <stop class="gradient-stop gradient-stop-e" offset="100%" />
           </linearGradient>
+
+          <filter id="glow-blur" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="6" result="blur" />
+          </filter>
         </defs>
 
-        <g class="wordmark-glow" aria-hidden="true">
-          <text class="wordmark-line wordmark-line-main" x="50%" y="44%" text-anchor="middle">W.A.</text>
-          <text class="wordmark-line wordmark-line-sub" x="50%" y="78%" text-anchor="middle">Wang</text>
+        <g class="wordmark-line-wrapper wordmark-line-wrapper-main">
+          <g class="wordmark-glow" aria-hidden="true">
+            <text class="wordmark-line wordmark-line-main" x="50%" y="40%" text-anchor="middle">W.a.</text>
+          </g>
+          <g class="wordmark-ink">
+            <text class="wordmark-line wordmark-line-main" x="50%" y="40%" text-anchor="middle">W.a.</text>
+          </g>
         </g>
 
-        <g class="wordmark-ink">
-          <text class="wordmark-line wordmark-line-main" x="50%" y="44%" text-anchor="middle">W.A.</text>
-          <text class="wordmark-line wordmark-line-sub" x="50%" y="78%" text-anchor="middle">Wang</text>
+        <g class="wordmark-line-wrapper wordmark-line-wrapper-sub">
+          <g class="wordmark-glow" aria-hidden="true">
+            <text class="wordmark-line wordmark-line-sub" x="50%" y="68%" text-anchor="middle">Wang</text>
+          </g>
+          <g class="wordmark-ink">
+            <text class="wordmark-line wordmark-line-sub" x="50%" y="68%" text-anchor="middle">Wang</text>
+          </g>
         </g>
       </svg>
 
@@ -44,14 +57,14 @@
         <a href="#bio">Bio</a>
         <a href="#projects">Projects</a>
         <a href="#awards">Awards</a>
-        <a href="mailto:watiniaminawang@protonmail.com">Email</a>
+        <a href="mailto:watiniaminawang@protonmail.com" target="_blank">Email</a>
         <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
       </nav>
     </section>
 
     <div class="sections-stage">
       <section class="content-section active-section bio-section" id="bio" aria-labelledby="bio-title">
-        <p class="section-kicker">Bio</p>
+        <p class="section-kicker"><i data-lucide="pen" class="section-icon"></i>Bio</p>
         <div class="section-body">
           <div class="bio-layout">
             <div>
@@ -69,7 +82,7 @@
       </section>
 
       <section class="content-section" id="projects" aria-labelledby="projects-title">
-        <p class="section-kicker">Projects</p>
+        <p class="section-kicker"><i data-lucide="clapperboard" class="section-icon"></i>Projects</p>
         <div class="section-body">
           <h2 id="projects-title">Selected Screenplays</h2>
           <div class="project-list" role="list">
@@ -99,7 +112,7 @@
       </section>
 
       <section class="content-section" id="awards" aria-labelledby="awards-title">
-        <p class="section-kicker">Awards</p>
+        <p class="section-kicker"><i data-lucide="award" class="section-icon"></i>Awards</p>
         <div class="section-body">
           <h2 id="awards-title">Accolades and Selections</h2>
           <div class="award-list" role="list">
