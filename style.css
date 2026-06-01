@@ -87,15 +87,19 @@ body.is-compact .wordmark {
 .wordmark-glow {
   opacity: 0.06;
   filter: url("#glow-blur");
-  animation: glowPulse 6s ease-in-out infinite alternate;
+  animation: glowPulse 6s ease-in-out infinite alternate, glowDrift 10s cubic-bezier(0.34, 0.05, 0.25, 1) infinite alternate;
 }
 
 .wordmark-line-wrapper-main {
-  animation: wordmarkFloat 8s ease-in-out infinite alternate;
+  transform-origin: 600px 260px;
+  transform-box: view-box;
+  animation: wordmarkFloat 8s cubic-bezier(0.34, 0.05, 0.25, 1) infinite alternate;
 }
 
 .wordmark-line-wrapper-sub {
-  animation: wordmarkFloat 8s ease-in-out infinite alternate;
+  transform-origin: 600px 442px;
+  transform-box: view-box;
+  animation: wordmarkFloat 8s cubic-bezier(0.34, 0.05, 0.25, 1) infinite alternate;
   animation-delay: -2.5s;
 }
 
@@ -107,28 +111,33 @@ body.is-compact .wordmark {
 }
 
 .gradient-stop-a {
-  stop-color: #0a0a12;
+  stop-color: #0a0a0a;
   animation-name: inkStopA;
+  animation-delay: 0s;
 }
 
 .gradient-stop-b {
-  stop-color: #161e36;
+  stop-color: #3a3a3a;
   animation-name: inkStopB;
+  animation-delay: -2.4s;
 }
 
 .gradient-stop-c {
-  stop-color: #20202a;
+  stop-color: #1a1a1a;
   animation-name: inkStopC;
+  animation-delay: -4.8s;
 }
 
 .gradient-stop-d {
-  stop-color: #2a2420;
+  stop-color: #4a4a4a;
   animation-name: inkStopD;
+  animation-delay: -7.2s;
 }
 
 .gradient-stop-e {
-  stop-color: #12100e;
+  stop-color: #111111;
   animation-name: inkStopE;
+  animation-delay: -9.6s;
 }
 
 .wordmark-line {
@@ -139,10 +148,13 @@ body.is-compact .wordmark {
 
 .wordmark-line-main {
   font-size: 230px;
+  animation: letterBreathe 8s cubic-bezier(0.34, 0.05, 0.25, 1) infinite alternate;
 }
 
 .wordmark-line-sub {
   font-size: 260px;
+  animation: letterBreathe 8s cubic-bezier(0.34, 0.05, 0.25, 1) infinite alternate;
+  animation-delay: -2.5s;
 }
 
 .descriptor,
@@ -394,34 +406,52 @@ body.is-compact .sections-stage {
   }
 }
 
+@keyframes glowDrift {
+  0% {
+    transform: translate3d(0, -6px, 0);
+  }
+  100% {
+    transform: translate3d(0, 6px, 0);
+  }
+}
+
+@keyframes letterBreathe {
+  0% {
+    letter-spacing: 0;
+  }
+  100% {
+    letter-spacing: 0.012em;
+  }
+}
+
 @keyframes inkStopA {
-  0%   { stop-color: #0a0a12; }
-  50%  { stop-color: #12121e; }
-  100% { stop-color: #06060a; }
+  0%   { stop-color: #0a0a0a; }
+  50%  { stop-color: #5a5a5a; }
+  100% { stop-color: #111111; }
 }
 
 @keyframes inkStopB {
-  0%   { stop-color: #161e36; }
-  50%  { stop-color: #1a2440; }
-  100% { stop-color: #0e1220; }
+  0%   { stop-color: #3a3a3a; }
+  50%  { stop-color: #7a7a7a; }
+  100% { stop-color: #1a1a1a; }
 }
 
 @keyframes inkStopC {
-  0%   { stop-color: #20202a; }
-  50%  { stop-color: #2a2a34; }
-  100% { stop-color: #14141c; }
+  0%   { stop-color: #1a1a1a; }
+  50%  { stop-color: #6a6a6a; }
+  100% { stop-color: #0a0a0a; }
 }
 
 @keyframes inkStopD {
-  0%   { stop-color: #2a2420; }
-  50%  { stop-color: #342e28; }
-  100% { stop-color: #1a1614; }
+  0%   { stop-color: #4a4a4a; }
+  50%  { stop-color: #8a8a8a; }
+  100% { stop-color: #222222; }
 }
 
 @keyframes inkStopE {
-  0%   { stop-color: #12100e; }
-  50%  { stop-color: #1a1612; }
-  100% { stop-color: #0a0808; }
+  0%   { stop-color: #111111; }
+  50%  { stop-color: #5a5a5a; }
+  100% { stop-color: #050505; }
 }
 
 @media (max-width: 760px) {
