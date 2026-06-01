@@ -9,17 +9,30 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. INTRO LOADER SEQUENCE
   // ----------------------------------------------------
   const loader = document.getElementById('intro-loader');
-  
+  const loaderStartTime = Date.now();
+  const MIN_LOADER_DURATION = 1600; // Enforces a 1.6s minimum visual pause to let the logo expand
+
   window.addEventListener('load', () => {
-    fadeOutLoader();
+    scheduleFadeOut();
   });
 
-  setTimeout(() => {
+  // Fallback in case window load hangs
+  const fallbackTimeout = setTimeout(() => {
     fadeOutLoader();
-  }, 1600); // Fallback
+  }, 3500);
+
+  function scheduleFadeOut() {
+    const elapsed = Date.now() - loaderStartTime;
+    const remaining = Math.max(0, MIN_LOADER_DURATION - elapsed);
+    
+    setTimeout(() => {
+      fadeOutLoader();
+    }, remaining);
+  }
 
   function fadeOutLoader() {
     if (loader && !loader.classList.contains('faded')) {
+      clearTimeout(fallbackTimeout);
       loader.classList.add('faded');
       loader.style.opacity = '0';
       loader.style.pointerEvents = 'none';
