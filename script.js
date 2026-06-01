@@ -10,6 +10,7 @@ const sectionLinks = document.querySelectorAll('.primary-links a[href^="#"]');
 const sections = document.querySelectorAll(".content-section");
 const stage = document.querySelector(".sections-stage");
 let currentSectionId = "";
+let backToTopBtn;
 
 function showSection(sectionId) {
   document.body.classList.add("is-compact");
@@ -31,6 +32,10 @@ function showSection(sectionId) {
   if (stage) {
     stage.scrollTo({ top: 0, behavior: "smooth" });
   }
+
+  if (backToTopBtn) {
+    backToTopBtn.classList.remove("is-visible");
+  }
 }
 
 function showLanding() {
@@ -42,6 +47,10 @@ function showLanding() {
   sectionLinks.forEach((link) => {
     link.classList.remove("is-active");
   });
+
+  if (backToTopBtn) {
+    backToTopBtn.classList.remove("is-visible");
+  }
 }
 
 sectionLinks.forEach((link) => {
@@ -71,6 +80,16 @@ window.addEventListener("hashchange", () => {
     showSection(sectionId);
   }
 });
+
+backToTopBtn = document.querySelector(".back-to-top");
+if (backToTopBtn && stage) {
+  stage.addEventListener("scroll", () => {
+    backToTopBtn.classList.toggle("is-visible", stage.scrollTop > 300);
+  });
+  backToTopBtn.addEventListener("click", () => {
+    stage.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
 
 window.setInterval(() => {
   if (!window.location.hash) {
