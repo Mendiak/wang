@@ -112,22 +112,22 @@ body.is-compact .wordmark {
 }
 
 .gradient-stop-b {
-  stop-color: #1a1a2e;
+  stop-color: #161e36;
   animation-name: inkStopB;
 }
 
 .gradient-stop-c {
-  stop-color: #12121a;
+  stop-color: #20202a;
   animation-name: inkStopC;
 }
 
 .gradient-stop-d {
-  stop-color: #162032;
+  stop-color: #2a2420;
   animation-name: inkStopD;
 }
 
 .gradient-stop-e {
-  stop-color: #0a0a0f;
+  stop-color: #12100e;
   animation-name: inkStopE;
 }
 
@@ -396,32 +396,32 @@ body.is-compact .sections-stage {
 
 @keyframes inkStopA {
   0%   { stop-color: #0a0a12; }
-  50%  { stop-color: #1a1a2e; }
-  100% { stop-color: #05050a; }
+  50%  { stop-color: #12121e; }
+  100% { stop-color: #06060a; }
 }
 
 @keyframes inkStopB {
-  0%   { stop-color: #1a1a2e; }
-  50%  { stop-color: #0a0d14; }
-  100% { stop-color: #162032; }
+  0%   { stop-color: #161e36; }
+  50%  { stop-color: #1a2440; }
+  100% { stop-color: #0e1220; }
 }
 
 @keyframes inkStopC {
-  0%   { stop-color: #12121a; }
-  50%  { stop-color: #26262e; }
-  100% { stop-color: #08080d; }
+  0%   { stop-color: #20202a; }
+  50%  { stop-color: #2a2a34; }
+  100% { stop-color: #14141c; }
 }
 
 @keyframes inkStopD {
-  0%   { stop-color: #162032; }
-  50%  { stop-color: #101418; }
-  100% { stop-color: #1a1a2e; }
+  0%   { stop-color: #2a2420; }
+  50%  { stop-color: #342e28; }
+  100% { stop-color: #1a1614; }
 }
 
 @keyframes inkStopE {
-  0%   { stop-color: #0a0a0f; }
-  50%  { stop-color: #141420; }
-  100% { stop-color: #060608; }
+  0%   { stop-color: #12100e; }
+  50%  { stop-color: #1a1612; }
+  100% { stop-color: #0a0808; }
 }
 
 @media (max-width: 760px) {
