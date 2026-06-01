@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ----------------------------------------------------
   const loader = document.getElementById('intro-loader');
   const loaderStartTime = Date.now();
-  const MIN_LOADER_DURATION = 1600; // Enforces a 1.6s minimum visual pause to let the logo expand
+  const MIN_LOADER_DURATION = 2500; // Enforces a 2.5s minimum visual pause to let the logo expand
 
   window.addEventListener('load', () => {
     scheduleFadeOut();
