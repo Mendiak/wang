@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>W.A. Wang — Screenwriter & Storyteller</title>
+  <meta name="title" content="W.A. Wang — Screenwriter & Storyteller">
+  <meta name="description" content="Portfolio of W.A. Wang, an emerging screenwriter and storyteller from the Netherlands exploring vulnerability, resilience, and human nuances through independent cinema.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="W.A. Wang — Screenwriter & Storyteller">
+  <meta property="og:description" content="Portfolio of W.A. Wang, an emerging screenwriter and storyteller from the Netherlands exploring vulnerability, resilience, and human nuances.">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Hidden SVG for cinematic morphing filter -->
+  <svg class="hidden-svg" aria-hidden="true">
+    <defs>
+      <filter id="cinematic-morph-static">
+        <feTurbulence type="fractalNoise" baseFrequency="0.01 0.005" numOctaves="1" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- 1. INTRO LOADER SEQUENCE -->
+  <div id="intro-loader" aria-hidden="true">
+    <div class="loader-logo">W.A. Wang</div>
+  </div>
+
+  <!-- 2. MAIN SPLIT PRESENTATION WRAPPER -->
+  <div class="main-wrapper" id="main-container">
+    
+    <!-- LEFT COLUMN: SIDEBAR / NAVIGATION (FIXED ON DESKTOP) -->
+    <aside class="sidebar-panel">
+      <div class="sidebar-top">
+        <!-- Clicking logo returns to home state -->
+        <a href="#home" class="nav-logo magnetic-item" id="brand-logo" aria-label="W.A. Wang Home">W.A. Wang</a>
+      </div>
+      
+      <nav class="sidebar-nav" aria-label="Portfolio sections">
+        <ul class="nav-links">
+          <li><a href="#bio" class="magnetic-item nav-tab-link" data-target="bio">Bio</a></li>
+          <li><a href="#projects" class="magnetic-item nav-tab-link" data-target="projects">Projects</a></li>
+          <li><a href="#awards" class="magnetic-item nav-tab-link" data-target="awards">Awards</a></li>
+          <li><a href="#contact" class="magnetic-item nav-tab-link" data-target="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <span class="sidebar-tagline">Screenwriter & Storyteller</span>
+      </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: DYNAMIC CONTENT VIEWPORT -->
+    <main class="content-viewport" id="content-stage">
+      
+      <!-- STAGE 0: HOME / LANDING SLIDE -->
+      <section class="viewport-slide active-slide" id="slide-home" aria-label="Introduction">
+        <div class="home-hero">
+          <h1 class="hero-title" id="interactive-hero-title">W.A. Wang</h1>
+          <p class="hero-tagline-large">Screenwriter & Storyteller</p>
+          <p class="hero-intro-text">
+            Exploring the intersection of vulnerability and resilience through quiet, human-centered independent screenwriting.
+          </p>
+          <div class="hero-discover-btn">
+            <a href="#bio" class="discover-link nav-tab-link magnetic-item" data-target="bio">
+              Enter Portfolio
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- STAGE 1: BIO SECTION -->
+      <section class="viewport-slide" id="slide-bio" aria-label="Biography">
+        <div class="bio-grid">
+          <div class="bio-content">
+            <span class="section-label">Biography</span>
+            <div class="bio-text">
+              <p>
+                W.A. Wang is an emerging screenwriter from the Netherlands. She writes deep and compelling stories at the intersection of vulnerability and resilience, exploring uncharted territories and the nuanced landscapes of human existence.
+              </p>
+              <p>
+                Her first feature screenplay <em>'Sh*t in the Blue Locker'</em> is an ode to the stigmatized and the misunderstood struggling with mental health conditions.
+              </p>
+            </div>
+          </div>
+          
+          <div class="portrait-column">
+            <!-- Interactive Grayscale-to-Color Circular Portrait -->
+            <div class="portrait-container magnetic-image" id="portrait-frame">
+              <img src="./wang.png" alt="W.A. Wang Portrait" class="portrait-img" id="portrait-photo" onerror="this.style.display='none'; this.parentNode.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-family:var(--font-serif);font-size:1.2rem;color:var(--text-secondary);\'>[ Portrait ]</div>';">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STAGE 2: PROJECTS SECTION -->
+      <section class="viewport-slide" id="slide-projects" aria-label="Selected Screenplays">
+        <span class="section-label">Projects</span>
+        <h2 class="category-title">Screenplays</h2>
+        
+        <div class="project-list" role="list">
+          
+          <!-- SCREENPLAY CARD 1 -->
+          <article class="project-card" tabindex="0" role="listitem" aria-expanded="false" aria-label="Sh*t in the Blue Locker Screenplay">
+            <div class="project-header">
+              <div class="project-meta">
+                <h3 class="project-title">Sh*t in the Blue Locker</h3>
+                <span class="project-year">2026</span>
+              </div>
+              <div class="project-toggle-icon" aria-hidden="true"></div>
+            </div>
+            
+            <div class="project-body">
+              <div class="project-body-content">
+                <p class="project-description">
+                  An ode to the stigmatized and the misunderstood struggling with mental health conditions. Two teenagers from contrasting backgrounds forge a quiet alliance in a psychiatric ward, shielding a shared secret from an unyielding system.
+                </p>
+                <div class="project-details-grid">
+                  <div class="detail-item">
+                    <strong>Format</strong>
+                    Feature Length Screenplay (112 mins)
+                  </div>
+                  <div class="detail-item">
+                    <strong>Genre</strong>
+                    Psychological Drama / Coming-of-Age
+                  </div>
+                  <div class="detail-item">
+                    <strong>Status</strong>
+                    Completed / Seeking Co-Production
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- SCREENPLAY CARD 2 -->
+          <article class="project-card" tabindex="0" role="listitem" aria-expanded="false" aria-label="The Silent Coast Screenplay">
+            <div class="project-header">
+              <div class="project-meta">
+                <h3 class="project-title">The Silent Coast</h3>
+                <span class="project-year">2025</span>
+              </div>
+              <div class="project-toggle-icon" aria-hidden="true"></div>
+            </div>
+            
+            <div class="project-body">
+              <div class="project-body-content">
+                <p class="project-description">
+                  An atmospheric study of isolation and memory on the wind-swept shores of Zeeland. An elderly lighthouse keeper is forced to confront the ghosts of his past when an enigmatic traveler washes ashore during a historic storm.
+                </p>
+                <div class="project-details-grid">
+                  <div class="detail-item">
+                    <strong>Format</strong>
+                    Short Film Screenplay (24 mins)
+                  </div>
+                  <div class="detail-item">
+                    <strong>Genre</strong>
+                    Cinematic Drama / Mystery
+                  </div>
+                  <div class="detail-item">
+                    <strong>Status</strong>
+                    Produced / Film Festival Run
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- SCREENPLAY CARD 3 -->
+          <article class="project-card" tabindex="0" role="listitem" aria-expanded="false" aria-label="Echoes of Clay Screenplay">
+            <div class="project-header">
+              <div class="project-meta">
+                <h3 class="project-title">Echoes of Clay</h3>
+                <span class="project-year">2024</span>
+              </div>
+              <div class="project-toggle-icon" aria-hidden="true"></div>
+            </div>
+            
+            <div class="project-body">
+              <div class="project-body-content">
+                <p class="project-description">
+                  A blind sculptor struggles with her failing touch while attempting to mold her final and most ambitious exhibition. As her sight fades completely, she embarks on a tactile exploration of her family's unspoken history.
+                </p>
+                <div class="project-details-grid">
+                  <div class="detail-item">
+                    <strong>Format</strong>
+                    Feature Length Screenplay (98 mins)
+                  </div>
+                  <div class="detail-item">
+                    <strong>Genre</strong>
+                    Arthouse Drama
+                  </div>
+                  <div class="detail-item">
+                    <strong>Status</strong>
+                    In Development / Supported by Utrecht Script Fund
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- STAGE 3: AWARDS SECTION -->
+      <section class="viewport-slide" id="slide-awards" aria-label="Awards and Selections">
+        <span class="section-label">Accolades</span>
+        
+        <div class="timeline-container">
+          
+          <div class="timeline-item">
+            <div class="timeline-year">2026</div>
+            <div class="timeline-details">
+              <div class="award-title">Finalist — Holland Screenplay Awards</div>
+              <div class="award-context">For 'Sh*t in the Blue Locker' (Feature Category)</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-details">
+              <div class="award-title">Semi-Finalist — European Writers Guild Contest</div>
+              <div class="award-context">For 'Echoes of Clay' (Arthouse Drama)</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-details">
+              <div class="award-title">Official Selection — Rotterdam International Film Festival</div>
+              <div class="award-context">For 'The Silent Coast' (Short Film Section)</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">2023</div>
+            <div class="timeline-details">
+              <div class="award-title">Winner — Utrecht Script Fund Development Grant</div>
+              <div class="award-context">Awarded for research into contemporary youth mental health representation</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- STAGE 4: CONTACT SECTION -->
+      <section class="viewport-slide" id="slide-contact" aria-label="Contact Information">
+        <span class="section-label">Inquiries</span>
+        
+        <div class="contact-grid">
+          
+          <div class="contact-column">
+            <span class="contact-label">Direct</span>
+            <a href="mailto:watiniaminawang@protonmail.com" class="contact-link magnetic-item">watiniaminawang@protonmail.com</a>
+          </div>
+
+          <div class="contact-column">
+            <span class="contact-label">Representation</span>
+            <span class="contact-info">
+              Henneman Agency Amsterdam<br>
+              agent@henneman.nl<br>
+              +31 (0)20 69 400 94
+            </span>
+          </div>
+
+          <div class="contact-column">
+            <span class="contact-label">Artistic Social</span>
+            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="contact-link magnetic-item">@w.a.wang</a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FOOTER (AN CHORED TO BOTTOM OF VIEWPORT ON DESKTOP) -->
+      <footer class="footer-section">
+        <div>&copy; 2026 W.A. Wang.</div>
+        <div>
+          Website by 
+          <a href="https://mendiak.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="footer-link">
+            Mikel Aramendia
+          </a>
+        </div>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="./script.js"></script>
+</body>
+</html>
