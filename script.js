@@ -1,9 +1,14 @@
-document.documentElement.classList.add("is-ready");
-
 document.addEventListener("DOMContentLoaded", () => {
   if (typeof lucide !== "undefined") {
     lucide.createIcons();
   }
+
+  Promise.race([
+    document.fonts.ready,
+    new Promise((r) => setTimeout(r, 2000)),
+  ]).then(() => {
+    document.documentElement.classList.add("is-ready");
+  });
 });
 
 const sectionLinks = document.querySelectorAll('.primary-links a[href^="#"]');
